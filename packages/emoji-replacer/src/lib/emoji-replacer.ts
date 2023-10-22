@@ -2,7 +2,7 @@ import { escapeForRegEx, Extension, textInputRule } from '@tiptap/core';
 
 type InputRuleOptions = { find: string; replace: string };
 export type EmojiReplacerOptions = {
-  customReplacements: InputRuleOptions[];
+  ruleConfigs: InputRuleOptions[];
   shouldUseExtraLookupSpace: boolean;
   shouldUseExtraReplacementSpace: boolean;
 };
@@ -12,7 +12,7 @@ export const EmojiReplacer = Extension.create<EmojiReplacerOptions>({
 
   addOptions() {
     return {
-      customReplacements: [],
+      ruleConfigs: [],
       shouldUseExtraLookupSpace: false,
       shouldUseExtraReplacementSpace: true,
     };
@@ -40,7 +40,7 @@ export const EmojiReplacer = Extension.create<EmojiReplacerOptions>({
        * Duplicate find patterns resolve with the first one found.
        * No need to filter duplicates as of now
        */
-      ...this.options.customReplacements,
+      ...this.options.ruleConfigs,
 
       // default rule options
       { find: `-___-`, replace: '😑' },

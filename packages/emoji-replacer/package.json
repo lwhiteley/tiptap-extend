@@ -1,0 +1,23 @@
+{
+  "name": "@tiptap-extend/emoji-replacer",
+  "version": "2.0.0",
+  "keywords": [
+    "tiptap",
+    "tiptap extension"
+  ],
+  "homepage": "https://github.com/lwhiteley/tiptap-extend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lwhiteley/tiptap-extend",
+    "directory": "packages/emoji-replacer"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@tiptap/core": "^2.0.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}

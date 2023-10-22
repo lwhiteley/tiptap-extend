@@ -1,0 +1,41 @@
+{
+  "name": "emoji-replacer",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/emoji-replacer/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/emoji-replacer",
+        "main": "packages/emoji-replacer/src/index.ts",
+        "tsConfig": "packages/emoji-replacer/tsconfig.lib.json",
+        "assets": ["packages/emoji-replacer/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs packages/emoji-replacer {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/emoji-replacer/**/*.ts",
+          "packages/emoji-replacer/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/emoji-replacer"
+      }
+    }
+  },
+  "tags": []
+}

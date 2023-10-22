@@ -1,9 +1,9 @@
 {
   "name": "tiptap-extend",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {},
-  "private": true,
+  "private": false,
   "keywords": [
     "tiptap",
     "tiptap extension"
@@ -36,9 +36,6 @@
     "vite": "~4.3.9",
     "vitest": "~0.32.0"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "nx": {
     "includedScripts": []
   }

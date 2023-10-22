@@ -5,6 +5,7 @@
     "tiptap",
     "tiptap extension"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/lwhiteley/tiptap-extend",
   "repository": {
     "type": "git",

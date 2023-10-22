@@ -72,15 +72,6 @@ importers:
         specifier: ~0.32.0
         version: 0.32.4(@vitest/ui@0.32.4)(jsdom@22.1.0)
 
-  dist/packages/emoji-replacer:
-    dependencies:
-      '@tiptap/core':
-        specifier: ^2.0.0
-        version: 2.1.12(@tiptap/pm@2.1.12)
-      tslib:
-        specifier: ^2.3.0
-        version: 2.6.2
-
   packages/emoji-replacer:
     dependencies:
       '@tiptap/core':

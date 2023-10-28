@@ -1,5 +1,7 @@
 # @tiptap-extend/columns
 
+[![npm version](https://badge.fury.io/js/@tiptap-extend%2Fcolumns.svg)](https://badge.fury.io/js/@tiptap-extend%2Fcolumns)
+
 This is a fork and update of https://github.com/topo-io/tiptap-extensions/tree/main/demos/column-extension
 
 ## Usage
@@ -14,8 +16,10 @@ import '@tiptap-extend/columns/src/lib/index.css';
 new Editor({
   element: document.querySelector('.element'),
   extensions: [
-    // override Document to allow columns
-    StarterKit.configure({ document: false }),
+    StarterKit.configure({
+      // optional: override Document
+      document: false,
+    }),
     ColumnsExtension,
   ],
   content: '<p>Hello World!</p>',

@@ -9,9 +9,7 @@ This is a fork and update of https://github.com/topo-io/tiptap-extensions/tree/m
 ```ts
 import { Node, Editor } from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
-import { ColumnsExtension } from '@gocapsule/column-extension';
-// don't forget to add styles to see the columns
-import '@tiptap-extend/columns/src/lib/index.css';
+import { ColumnsExtension } from '@tiptap-extend/columns';
 
 new Editor({
   element: document.querySelector('.element'),
@@ -20,10 +18,31 @@ new Editor({
       // optional: override Document
       document: false,
     }),
+
+    // don't forget to add styles to see the columns
     ColumnsExtension,
   ],
   content: '<p>Hello World!</p>',
 });
+```
+
+### Sample styling
+
+```css
+.ProseMirror .column-block {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 24px;
+  padding: 8px 0;
+}
+
+.ProseMirror .column {
+  overflow: hidden;
+  padding: 8px;
+  margin: -8px;
+}
 ```
 
 ## Development

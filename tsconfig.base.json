@@ -16,6 +16,7 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "paths": {
+      "@tiptap-extend/columns": ["packages/columns/src/index.ts"],
       "@tiptap-extend/emoji-replacer": ["packages/emoji-replacer/src/index.ts"]
     }
   },

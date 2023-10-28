@@ -1,0 +1,41 @@
+{
+  "name": "columns",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/columns/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/columns",
+        "main": "packages/columns/src/index.ts",
+        "tsConfig": "packages/columns/tsconfig.lib.json",
+        "assets": ["packages/columns/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs columns {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/columns/**/*.ts",
+          "packages/columns/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/columns"
+      }
+    }
+  },
+  "tags": []
+}

@@ -31,6 +31,8 @@
     "jsdom": "~22.1.0",
     "nx": "17.0.1",
     "prettier": "^2.6.2",
+    "prosemirror-model": "^1.19.3",
+    "prosemirror-state": "^1.4.3",
     "typescript": "~5.1.3",
     "verdaccio": "^5.0.4",
     "vite": "~4.3.9",

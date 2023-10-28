@@ -4,9 +4,6 @@
       "analyzeSourceFiles": true
     }
   },
-  "workspaceLayout": {
-    "libsDir": "packages"
-  },
   "extends": "nx/presets/npm.json",
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "targetDefaults": {

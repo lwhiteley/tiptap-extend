@@ -14,10 +14,7 @@ import { ColumnsExtension } from '@tiptap-extend/columns';
 new Editor({
   element: document.querySelector('.element'),
   extensions: [
-    StarterKit.configure({
-      // optional: override Document
-      document: false,
-    }),
+    StarterKit,
 
     // don't forget to add styles to see the columns
     ColumnsExtension,
@@ -42,6 +39,11 @@ new Editor({
   overflow: hidden;
   padding: 8px;
   margin: -8px;
+}
+
+.ProseMirror-focused .column {
+  border: 1px gray dashed;
+  border-radius: 8px;
 }
 ```
 

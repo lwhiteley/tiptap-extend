@@ -29,6 +29,9 @@ importers:
       '@tiptap/core':
         specifier: ^2.1.12
         version: 2.1.12(@tiptap/pm@2.1.12)
+      '@tiptap/pm':
+        specifier: ^2.1.12
+        version: 2.1.12
       '@types/node':
         specifier: 18.7.1
         version: 18.7.1
@@ -89,6 +92,12 @@ importers:
       prosemirror-state:
         specifier: ^1.0.0
         version: 1.4.3
+      tslib:
+        specifier: ^2.3.0
+        version: 2.6.2
+
+  packages/content-linter:
+    dependencies:
       tslib:
         specifier: ^2.3.0
         version: 2.6.2

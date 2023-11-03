@@ -1,0 +1,41 @@
+{
+  "name": "content-linter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/content-linter/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/content-linter",
+        "main": "packages/content-linter/src/index.ts",
+        "tsConfig": "packages/content-linter/tsconfig.lib.json",
+        "assets": ["packages/content-linter/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs content-linter {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/content-linter/**/*.ts",
+          "packages/content-linter/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/content-linter"
+      }
+    }
+  },
+  "tags": []
+}

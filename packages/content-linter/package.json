@@ -1,23 +1,27 @@
 {
-  "name": "@tiptap-extend/emoji-replacer",
+  "name": "@tiptap-extend/content-linter",
   "version": "2.1.6",
   "keywords": [
     "tiptap",
     "tiptap extension", 
     "extension",
     "plugin",
-    "emoji",
-    "smilie"
+    "lint",
+    "linter",
+    "linting",
+    "content linter",
+    "content linting"
   ],
   "license": "MIT",
   "homepage": "https://github.com/lwhiteley/tiptap-extend",
   "repository": {
     "type": "git",
     "url": "https://github.com/lwhiteley/tiptap-extend",
-    "directory": "packages/emoji-replacer"
+    "directory": "packages/content-linter"
   },
   "peerDependencies": {
-    "@tiptap/core": "^2.0.0"
+    "@tiptap/core": "^2.0.0",
+    "@tiptap/pm": "^2.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

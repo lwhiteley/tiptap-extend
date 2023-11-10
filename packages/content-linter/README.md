@@ -1,6 +1,6 @@
 # @tiptap-extend/content-linter
 
-[![npm version](https://badge.fury.io/js/@tiptap-extend%content-linter.svg)](https://badge.fury.io/js/@tiptap-extend%content-linter)
+[![npm version](https://badge.fury.io/js/@tiptap-extend%2Fcontent-linter.svg)](https://badge.fury.io/js/@tiptap-extend%2Fcontent-linter)
 
 ## Description
 

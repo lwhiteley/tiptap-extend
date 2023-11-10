@@ -20,12 +20,9 @@
         "{workspaceRoot}/eslint.config.js"
       ]
     },
-    "test": {
+    "@nx/vite:test": {
       "cache": true,
       "inputs": ["default", "^default"]
-    },
-    "e2e": {
-      "cache": true
     }
   }
 }

@@ -52,11 +52,11 @@ export class BadWordsLintRule extends ContentLinterRule<{
 
   scan() {
     this.document.descendants((node: ProseMirrorNode, position: number) => {
-      if (!node.isText || !node.text) return;
+      const isEnabled = this.options?.enabled ?? true;
+
+      if (!node.isText || !node.text || !isEnabled) return;
 
       findPositionsByPattern(node.text, this.regex).forEach((match) => {
-        if (this.options && !this.options?.enabled) return;
-
         /**
          * omitting `message`` will also omit rendering the lint icon
          **/

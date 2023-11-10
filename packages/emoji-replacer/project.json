@@ -1,5 +1,5 @@
 {
-  "name": "packages/emoji-replacer",
+  "name": "emoji-replacer",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/emoji-replacer/src",
   "projectType": "library",
